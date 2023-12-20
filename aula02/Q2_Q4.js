@@ -1,6 +1,6 @@
 //Questão 02
 const user = {
-    name: 'Jubscleiton',
+    name: 'jubscleiton',
     sex: 'Confia',
     age: 8001
 }

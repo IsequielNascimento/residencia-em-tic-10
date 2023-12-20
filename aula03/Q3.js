@@ -26,4 +26,4 @@ function operacao(operacao, number1, number2){
 return operacao;
 }
 
-operacao('subtração',2,2)
+operacao('subtração', 2, 2)

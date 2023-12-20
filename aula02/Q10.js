@@ -17,31 +17,25 @@ const products = [
         price: 10.5
     }
 ]
-let atual = null;
-let menor = null;
-let percorrerLista = 0
+
 let ordem = [...products];
+// let menor = 0;
 
-for(let index = 0; index< products.length; index++){
-    atual = products[index]
-
-        if(menor === null){
-            menor = products[index]
-            ordem[index] = menor
-        }else if( products[index].price < ordem[percorrerLista].price ){
-            
-            ordem[percorrerLista] = products[index]
-            console.log("----------------")
-            console.log(ordem[percorrerLista])
-        }else{
-            for( percorrerLista; percorrerLista === ordem.length ;percorrerLista++){
-                if( products[index].price > ordem[percorrerLista].price){
-                    
-                }
-            }
-            
+for(let i = 0; i < products.length; i++){
+    for(let j = 0; j < products.length; j++){
+      if (products[j].price < ordem[i].price){
+                ordem[i] = products[j];
         }
+        
+    }
+    console.log(ordem[i])
 }
 
 
-// ...
+// for(let i = 0; i < products.length; i++){
+//     for(let j = 0; j < products.length; j++){
+//         if(products[j].price < ordem[i].price){
+//             console.log(ordem)
+//         }
+//     }
+// }
