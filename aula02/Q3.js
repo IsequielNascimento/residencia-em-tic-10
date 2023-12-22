@@ -33,6 +33,7 @@ if (user.name && user.sex && user.age) {
 
 if (typeof user.name !== "string") {
     console.log("O nome do usuário foi registrado no formato errado. Deve ser string");
+
 }
 
 if (typeof user.sex !== "string") {
@@ -43,19 +44,3 @@ if (typeof user.age !== "number") {
     console.log("A idade do usuário foi registrado no formato errado. Deve ser number");
 
 }
-
-
-//Questão 04  A partir do algoritmo criado na questão anterior, refatore-o para que seja utilizada apenas 3 condicionais.
-
-if (!user.name || typeof user.name !== "string") {
-    console.log("O nome do usuário não pode estar em branco ou ser diferente de string");
-}
-else if (!user.sex || typeof user.sex !== "string") {
-    console.log("O sexo do usuário não pode estar em branco ou ser diferente de string");
-}
-else if (!user.age && user.age !== 0 || typeof user.age !== "number") {
-    console.log("A idade do usuário não pode estar em branco ou ser diferente de number");
-} else { console.log(`O usuário ${user.name} do sexo ${user.sex}, tem ${user.age} ano(s)!`); }
-
-
-

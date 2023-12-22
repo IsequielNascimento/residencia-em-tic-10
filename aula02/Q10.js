@@ -18,24 +18,17 @@ const products = [
     }
 ]
 
-let ordem = [...products];
-// let menor = 0;
 
-for(let i = 0; i < products.length; i++){
-    for(let j = 0; j < products.length; j++){
-      if (products[j].price < ordem[i].price){
-                ordem[i] = products[j];
+let aux;
+for (let i = 0; i < products.length; i++) {
+    for (let j = i; j < products.length; j++) {
+        if (products[i].price > products[j].price) {
+            aux = products[i];
+            products[i] = products[j];
+            products[j] = aux;
         }
-        
     }
-    console.log(ordem[i])
+
 }
+console.log(products)
 
-
-// for(let i = 0; i < products.length; i++){
-//     for(let j = 0; j < products.length; j++){
-//         if(products[j].price < ordem[i].price){
-//             console.log(ordem)
-//         }
-//     }
-// }

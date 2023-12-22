@@ -42,15 +42,19 @@ A lista não possui produtos!
 O parâmetro deve ser uma lista!
 */
 function validar(check) {
-    if (check[0] === undefined) {
-        console.log("A lista não possui produtos")
-    }
     if (typeof check === "string" || typeof check === "number") {
-        console.log("O parâmetro deve ser uma lista!")
+        console.log("O parâmetro deve ser uma lista.");
+
+    }
+    else if (check[0] === undefined) {
+        console.log("A lista não possui produtos");
+    }
+    else {
+        percorrerlista(check);
     }
 }
 
-function percorrerlista(percorrer){
+function percorrerlista(percorrer) {
     for (let index = 0; index < percorrer.length; index++) {
         console.log(`
             Id do produto: ${percorrer[index].id}
@@ -60,32 +64,17 @@ function percorrerlista(percorrer){
     }
 }
 function showProductsInfo(produtosList) {
-let checagem = 1;
-
-if( checagem === 1){
     validar(produtosList)
-    checagem--;
-} else{
-    percorrerlista(produtosList)
-}
     return;
 
 }
 
 let confia = "hakuna matata";
-// validarLista(confia)
-// validarLista(products);
-
 console.log("---------------------------")
-console.log(showProductsInfo(products))
-
+showProductsInfo(products)
 console.log("---------------------------")
-console.log(showProductsInfo([]))
-/* resultado no terminal deve ser:
-A lista não possui produtos!
-*/
+showProductsInfo([])
 console.log("---------------------------")
-console.log(showProductsInfo(2))
-/* resultado no terminal deve ser:
-O parâmetro deve ser uma lista!
-*/
+showProductsInfo(2)
+console.log("---------------------------")
+showProductsInfo(confia)
