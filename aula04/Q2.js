@@ -30,30 +30,40 @@ console.log(findUserById(users, '2'))
 O segundo parâmetro deve ser um número!
 */
 
-function findUserById (user, ID){
-    // let ID = id
+function findUserById (user, userID){
+    let ID = userID
+    validar(user, userID)
    
 }
 
-    function validar(check) {
-        if (typeof check === "string" || typeof check === "number") {
+    function validar(checkUser, checkID) {
+        if (typeof checkUser === "string" || typeof checkUser === "number") {
             console.log("O parâmetro deve ser uma lista.");
     
         }
-        else if (check[0] === undefined) {
+        else if (checkUser[0] === undefined) {
             console.log("A lista não possui produtos");
+        }else if(typeof checkID !== "number"){
+            console.log("O segundo parâmetro deve ser um número!");
         }
         else {
-            percorrerlista(check);
+            percorrerlista(checkUser, checkID);
         }
     }
+    function percorrerlista(listaUser, idUser) {
+        let notUser = 0
 
-    function percorrerlista(percorrer) {
-        for (let index = 0; index < percorrer.length; index++) {
+        for (let index = 0; index < listaUser.length; index++) {
            
-                if( user[index].id === ID ){
-                    console.log(user[index])
+                if( listaUser[index].id === idUser ){
+                    console.log(listaUser[index])
+                    notUser = 0;
+                } else{
+                    notUser = 1;
                 }
             
+        }
+        if( notUser === 1){
+            console.log("User não encontrado");
         }
     }
