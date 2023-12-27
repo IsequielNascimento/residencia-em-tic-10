@@ -12,7 +12,7 @@
         <h2>Formulário para cadastro de usuários</h2>
         <form action="" method="post">
             <label for="userName"> Nome:
-                <input type="text" id="userName" name="userName" placeholder="Insira seu nome" required></br>
+                <input type="text" id="userName" name="userName" placeholder="Insira seu nome" required autofocus></br>
 
             </label>
 
@@ -27,12 +27,12 @@
             </label>
 
             <label for="userLocation"> Endereço:
-                <input type="text" name="userLocation" id="userLocation" placeholder="Insira seu Endereço"
+                <input type="text" name="userLocation" id="userLocation" placeholder="Insira seu endereço"
                     required></br>
 
             </label>
 
-            <label for="userNationality"> Nacionalidade: 
+            <label for="userNationality"> Nacionalidade:
                 <input type="text" name="userNationality" id="userNationality" placeholder="Insira sua nacionalidade"
                     required></br>
 
@@ -42,15 +42,14 @@
                 <input type="text" name="userNumber" id="userNumber" placeholder="Insira seu Telefone" required></br>
             </label>
 
-            <label for="userJob"> Empregabilidade: </br>
-
-                Estudante:
-                <input type="checkbox" name="studentCheck" id="studentCheck">
-                CLT:
-                <input type="checkbox" name="cltCheck" id="cltCheck">
-                MEI:
-                <input type="checkbox" name="meiCheck" id="meiCheck">
-            </label>
+            <label for="userJob"> Empregabilidade:
+                <select name="userJob" id="userJob">
+                    <option value="profissao">Profissão</option>
+                    <option value="student">Estudante</option>
+                    <option value="clt">CLT</option>
+                    <option value="mei">MEI</option>
+                </select>
+            </label></br>
             <input type="submit" value="Enviar">
         </form>
     </main>
