@@ -22,7 +22,7 @@ const products = [
 let index = 0;
 while(index < products.length){
 
-    if(products[index].price < 10.5){
+    if(products[index].price < 10.50){
         console.log(products[index])
     }
     index++;

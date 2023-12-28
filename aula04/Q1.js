@@ -41,44 +41,55 @@ A lista não possui produtos!
 /* resultado no terminal deve ser:
 O parâmetro deve ser uma lista!
 */
+function validar(check) {
+    if (typeof check === "string" || typeof check === "number") {
+        console.log("O parâmetro deve ser uma lista.");
 
-function showProductsInfo(productList, callback) {
-    if (!Array.isArray(productList)) {
-        callback("O parâmetro deve ser uma lista!", null);
-        return;
     }
-
-    if (productList.length === 0) {
-        callback("A lista não possui produtos!", null);
-        return;
+    else if (check[0] === undefined) {
+        console.log("A lista não possui produtos");
     }
-
-    for (let index = 0; index < productList.length; index++) {
-        const product = productList[index];
-        const infoProduct = `
-            Id do produto: ${product.id}
-            Nome do produto: ${product.name}
-            Preço do produto: ${product.price}
-        `;
-        callback(null,infoProduct);
-    }
-    return "Fim da lista"
-}
-
-function handleResult(error, result) {
-    if (error) {
-        console.log("Erro: " + error);
-    } else {
-        console.log(result);
+    else {
+        percorrerlista(check);
     }
 }
-showProductsInfo(products, handleResult);
-console.log(`\n================================================\n`)
-showProductsInfo([], handleResult);
-console.log(`\n================================================\n`)
-showProductsInfo(2, handleResult)
-console.log(`\n================================================\n`)
 
-// console.log(showProductsInfo(2, handleResult),`\n`);
+function percorrerlista(percorrer) {
+    for (let index = 0; index < percorrer.length; index++) {
+        console.log(`
+            Id do produto: ${percorrer[index].id}
+            Nome do produto: ${percorrer[index].name}
+            Preço do produto: ${percorrer[index].price}
+            `);
+    }
+}
+function showProductsInfo(produtosList) {
+let checagem = 1;
 
-// console.log(showProductsInfo(products, handleResult))
+if( checagem === 1){
+    validar(produtosList)
+    checagem--;
+} else{
+    percorrerlista(produtosList)
+}
+    return;
+
+}
+
+let confia = "hakuna matata";
+// validarLista(confia)
+// validarLista(products);
+
+console.log("---------------------------")
+console.log(showProductsInfo(products))
+
+console.log("---------------------------")
+console.log(showProductsInfo([]))
+/* resultado no terminal deve ser:
+A lista não possui produtos!
+*/
+console.log("---------------------------")
+console.log(showProductsInfo(2))
+/* resultado no terminal deve ser:
+O parâmetro deve ser uma lista!
+*/
