@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+
+    padding: 16px;
+    margin: 4px;
+    
+    background-color: #3730a3;
+    color: #f1f1f1;
+
+    border-radius: 8px;
+    line-height: 120%;
+    box-sizing: 30%;
+    
+
+}
+
+h3 {
+    color: yellow;
+    
+}
+
+
+dl {
+
+    line-height: 8px 12px;
+    background-color: #706da3;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 8px;
+
+}
+
+dt {
+    font-weight: bold;
+
+}
+
+dd {
+    padding-left: 16px;
+}

@@ -18,5 +18,9 @@ comprasMapeadas [
 ]   
 
 function tiposCompras(compras, produtos, mapeaCompra){
-
+    
 }
+
+
+
+

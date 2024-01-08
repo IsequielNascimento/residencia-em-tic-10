@@ -1,0 +1,9 @@
+.email{
+    color: red;
+
+}
+
+form{
+    & input:valid {
+    }
+}
