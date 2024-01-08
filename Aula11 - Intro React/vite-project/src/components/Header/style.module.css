@@ -1,0 +1,11 @@
+.Header {
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 200%;
+    height: 20vh;
+    width: 100vw;
+    padding-left: 15%;
+}
