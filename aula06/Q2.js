@@ -4,24 +4,37 @@ Um número que representará o índice do compartimento da estante
 */
 
 const estante = [
-    [{ id: 1, cor: "vermelho" }, { id: 2, cor: "azul" }, { id: 3, cor: "amarelo" }],
-    [{ id: 4, cor: "cor sim" }, { id: 5, cor: "cor não" }, { id: 6, cor: "roxo" }],
-    [{ id: 7, cor: "vermelho" }, { id: 8, cor: "vermelho 2" }, { id: 9, cor: "vermelho 3" }],
+    //Compartimento 1
+    [
+        { id: 1, cor: "vermelho" },
+        { id: 2, cor: "azul" },
+        { id: 3, cor: "amarelo" }
+    ],
+    //Compartimento 2
+    [
+        { id: 4, cor: "Laranja" },
+        { id: 5, cor: "Verde" },
+        { id: 6, cor: "roxo" }
+    ],
+    //Compartimento 3
+    [
+        { id: 7, cor: "Lilás" },
+        { id: 8, cor: "Azul 2" },
+        { id: 9, cor: "Cinza" }
+    ],
 ]
 
-console.log(estante[1][1])
-
-function locateBox(estante, indice) {
-
-    for (let i = 0; i < estante.lenght; i++) {
-        for (let j = 0; j < estante.lenght; i++) {
-            if (estante[i][j].id === indice) {
-                return console.log(estante[i][j])
-            }
-        }
-
+function obterCaixasPorCompartimento(estante, indiceCompartimento) {
+    if (indiceCompartimento >= 0 && indiceCompartimento < estante.length) {
+        return estante[indiceCompartimento];
+    } else {
+        console.error('Índice de compartimento inválido.');
+        return null;
     }
-
 }
 
-locateBox(estante, 7)
+
+const compartimentoDesejado = 1;
+const caixasDoCompartimento = obterCaixasPorCompartimento(estante, compartimentoDesejado);
+console.log(`\n Caixas do Compartimento ${compartimentoDesejado}:`);
+console.log(caixasDoCompartimento);

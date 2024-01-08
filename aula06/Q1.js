@@ -2,9 +2,27 @@
 */
 
 const estante = [
-    [{id: 1, cor: "vermelho"},{id: 2, cor: "azul"},{id: 3, cor: "amarelo"}],
-    [{id: 4, cor: "cor sim"},{id: 5, cor: "cor não"},{id: 6, cor: "roxo"} ],
-    [ {id: 7, cor: "vermelho"},{id: 8, cor: "vermelho 2"},{id: 9, cor: "vermelho 3"}    ],
+    //Compartimento 1
+    [
+        { id: 1, cor: "vermelho" },
+        { id: 2, cor: "azul" },
+        { id: 3, cor: "amarelo" }
+    ],
+    //Compartimento 2
+    [
+        { id: 4, cor: "Laranja" },
+        { id: 5, cor: "Verde" },
+        { id: 6, cor: "roxo" }
+    ],
+    //Compartimento 3
+    [
+        { id: 7, cor: "Lilás" },
+        { id: 8, cor: "Azul 2" },
+        { id: 9, cor: "Cinza" }
+    ],
 ]
 
 console.log(estante[1][1])
+
+const caixaEscolhida = estante[1][1];
+console.log(caixaEscolhida);
