@@ -4,10 +4,10 @@ import { IoIosShareAlt } from "react-icons/io";
 import { BsGlobeAmericas } from "react-icons/bs";
 
 
-function Header() {
+function Header({props}) {
     return (
         <header className={" flex justify-between items-center w-full mt-4 mb-2"}>
-            <img src="../src\assets\Ellipse 1.png" alt="" className="profilePic pl-4" />
+            <img src="src\assets\irede.png" alt="" className="profilePic pl-4" />
 
             <div className={" text-sm pr-2"}>
                 <h3>Instituto IREDE</h3>
