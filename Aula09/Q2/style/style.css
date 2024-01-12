@@ -1,9 +1,11 @@
-.email{
-    color: red;
 
+label{
+    display: flex;
+    flex-direction: column;
+    
 }
 
-form{
-    & input:valid {
-    }
+input.email:placeholder-shown{
+
+
 }
