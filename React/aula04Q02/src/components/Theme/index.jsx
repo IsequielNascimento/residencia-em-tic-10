@@ -17,10 +17,10 @@ export default function Theme() {
 
     return (
         <>
-            <div className="Theme" style={{ backgroundColor: theme === "claro" ? "gray" : "black" }}>
+            <div className="Theme" style={{ backgroundColor: theme === "claro" ? "blue" : "black" }}>
 
 
-                <button onClick={handleTheme}>
+                <button onClick={handleTheme} style={{ backgroundColor: theme === "claro" ? "black" : "blue"}}>
                     {theme === "claro" ? "escuro" : "claro"}
                 </button>
             </div>
