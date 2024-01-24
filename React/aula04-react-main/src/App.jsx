@@ -9,7 +9,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("nome", useState(name))
+    console.log(useState)
   
   }
 
