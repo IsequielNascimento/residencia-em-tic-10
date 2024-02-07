@@ -1,4 +1,6 @@
 const express = require('express')
+var fs = require("fs");
+
 
 const api = express()
 
@@ -17,7 +19,20 @@ const api = express()
 
 api.use('/pessoas', (request, response, next) => {
 
-    console.log("teste")
+    //leitura do pessoas.json
+    fs.readFile("pessoas.json", function (err, data) {
+
+
+        if (err) {
+            return console.log("Erro ao ler arquivo");
+        }// retornar caso der erro
+
+        //converter para json
+        const pessoas = JSON.parse(data);
+
+        console.log(pessoas);
+    });
+
     next()
 })
 
@@ -26,3 +41,4 @@ api.get('/pessoas', (request, response) => {
 })
 // definicao da porta que a api vai escutar
 api.listen(3000, () => console.log('A API tá on na porta 3000!'))
+
